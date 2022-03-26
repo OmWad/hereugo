@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Only for U</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+ 
+ <section class="home">
+     <div class="container">
+        <div class="row">
+            <div class="home-text">
+                 
+                 <p class="animate-text">
+                    <span>I want to ask U something</span>
+                    
+                    <span>Read till end pls</span>
+                    <span>No one ever loved me</span>
+                    <span>as much U did</span>
+                    <span>I always wanted to tell U this</span>
+                    <span>I wasn't able to tell u this</span>
+                    <span>Face to Face</span>
+                    <span>So I made this</span>
+                    <span>When I saw u first time u were</span>
+                    <span>unknown for me but now</span>
+                    <span>U have become special to me</span>
+                    <span>As days have gone u got closer to me</span>
+                    <span>Everything about u is always interesting for me</span>
+                    <span>I am somewhat nervous because i havnt</span>
+                    <span>Said this words to anyone</span>
+                    <span>I will not say this to anyone in future either</span>
+                    <span>I did not have many friends but</span>
+                    <span>I got u Nirmeeti and now i want to</span>
+                    <span>Take this furthur</span>
+                    <span>I am not sure u will agree or not but</span>
+                    <span> Will u be my Sister</span>
+                    <span>I want to be your brother</span>
+                    <span>I never had anyone as much loving as U</span>
+                    <span>I promise i will never leave u</span>
+                    <span>Thats it</span>
+                 </p>
+            </div>
+        </div>
+     </div>
+ </section>
+
+
+
+<script>
+         const txts=document.querySelector(".animate-text").children,
+               txtsLen=txts.length;
+           let index=0;
+          const textInTimer=4000,
+                textOutTimer=3800;
+
+         function animateText() {
+            for(let i=0; i<txtsLen; i++){
+              txts[i].classList.remove("text-in","text-out");  
+            }
+            txts[index].classList.add("text-in");
+
+            setTimeout(function(){
+                txts[index].classList.add("text-out");              
+            },textOutTimer)
+
+            setTimeout(function(){
+
+              if(index == txtsLen-1){
+                  index=0;
+                }
+               else{
+                   index++;
+                 }
+                animateText();
+            },textInTimer); 
+         }
+         
+         window.onload=animateText;
+</script>
+<audio src="y2meta.com - Billie Eilish - Lovely (Welcome Home) (320 kbps).mp3" autoplay loop></audio>
+
+</body>
+</html>
+
+
+
+
